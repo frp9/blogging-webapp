@@ -1,0 +1,30 @@
+<div>
+    <div class="col-md-12">
+        <h2>Log In</h2>
+        <hr>
+        {{#if errorMessage}}
+            <div class="alert alert-danger">
+                <strong>Error:</strong>
+                {{errorMessage}}
+            </div>
+        {{/if}}
+        <form action="/login" method="post">
+            <div class="row" >
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="userName" name="userName" placeholder="User Name" required="" value={{userName}}>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-gorup">
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Password" required="">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <input type="submit" class="btn btn-success pull-right" value="Login">
+        </form>
+    </div>
+</div>
